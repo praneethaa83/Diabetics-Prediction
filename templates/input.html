@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <title> EARLY DIABETES PREDICTION </title>
+    <style>
+        select,input[type=number] {
+          width: 25%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid rgb(249, 249, 253);color: rgb(19, 18, 18);
+          background-color: rgb(246, 249, 252);
+          border-color:black;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        input[type=submit] {
+          width: 25%;
+          background-color:#010f24;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        
+        
+    </style>
+<body background="https://st3.depositphotos.com/29475518/33780/v/1600/depositphotos_337805454-stock-illustration-medical-and-health-care-logo.jpg">
+<centre>
+<h1>Early Diabetes Prediction</h1>
+
+
+
+<form action="/input", method="POST">
+
+    <label for="age"><b>ENTER THE AGE  </b> </label><br>
+        <input name="age" placeholder="Enter Age" type="number"> <br><br>
+
+
+    <label for="gender"><b>SELECT YOUR GENDER</b> </label><br>
+              
+    <select name="gender">
+        <option value=0>MALE</option>
+        <option value=1>FEMALE</option>
+                
+    </select><br><br>
+<label for="polyuria"><b> DO YOU HAVE SYMPTOMS OF POLYURIA ( production of abnormally large volumes of dilute urine)  </b> </label><br>
+    <select name="polyuria">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+    </select><br><br>
+<label for="polydipsia"><b> DO YOU HAVE SYMPTOMS OF POLYDIPSIA ( abnormally great thirst)  </b> </label><br>
+    <select name="polydipsia">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+                
+    </select><br><br>
+<label for="suddenweightloss"><b> DO YOU HAVE SUDDEN WEIGHT LOSS  </b> </label><br>
+    <select name="suddenweightloss">
+        <option value=1>YES</option>
+        <option value=0>NO</option> 
+        
+    </select><br><br>
+<label for="weakness"><b> DO YOU HAVE SYMPTOMS OF WEAKNESS  </b> </label><br>
+    <select name="weakness">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+     </select><br><br>
+<label for="polyphagia"><b> DO YOU HAVE SYMPTOMS OF POLYPHAGIA ( excessive eating or appetite)  </b> </label><br>
+    <select name="polyphagia">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+    
+
+</select><br><br>
+<label for="Genitalthrush"><b> DO YOU HAVE SYMPTOMS OF GENITAL THRUSH ( white vaginal discharge for women and white discharge for men)  </b> </label><br>
+    <select name="Genitalthrush">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+    </select><br><br>
+<label for="visionblurring"><b> DO YOU HAVE SYMPTOMS OF VISION BLURRING   </b> </label><br>
+    <select name="visionblurring">
+        <option value=1>YES</option>
+        <option value=0>NO</option>  
+        
+    </select><br><br>
+<label for="itching"><b> DO YOU HAVE SYMPTOMS OF ITCHING SKIN   </b> </label><br>
+    <select name="itching">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+        </select><br><br>
+<label for="irritability"><b> DO YOU HAVE SYMPTOMS OF IRRITABILITY (changes in blood sugar level can affect a person's mood and mental status. do u feel irritated often)  </b> </label><br>
+    <select name="irritability">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+    
+    </select><br><br>
+<label for="delayedhealing"><b> DO YOU HAVE DELAYED HEALING OF WOUNDS   </b> </label><br>
+    <select name="delayedhealing">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+    
+    </select><br><br>
+<label for="partialparesis"><b> DO YOU HAVE SYMPTOMS OF PARTIAL PARESIS (a condition in which muscle movement has become weakened or impaired)   </b> </label><br>
+    <select name="partial paresis">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+        
+    </select><br><br>
+<label for="musclestiffness"><b> DO YOU HAVE SYMPTOMS OF MUSCLE STIFFNESS    </b> </label><br>
+    <select name="muscle stiffness">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+    </select><br><br>
+<label for="alopecia"><b> DO YOU HAVE SYMPTOMS OF ALOPECIA (partial or complete absence of hair from areas of the body )    </b> </label><br>
+    <select name="alopecia">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+    </select><br><br>
+<label for="obesity"><b> DO YOU HAVE SYMPTOMS OF obesity ( overweight)    </b> </label><br>
+    <select name="obesity">
+        <option value=1>YES</option>
+        <option value=0>NO</option>
+
+
+    </select><br><br>    
+    <input type="submit" value="SUBMIT">
+</form>
+</centre>
+</body>
+</html>
