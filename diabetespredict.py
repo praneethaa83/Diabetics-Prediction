@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 
 
-model = pickle.load(open('diabetic.pkl', 'rb'))
+model = pickle.load(open('dbt.pkl', 'rb'))
 
 app=Flask(__name__)
 
@@ -22,30 +22,26 @@ def input():
 
     msg=""
     detail=request.form
-    age=detail['Age']
-    gender=detail['Gender']
-    polyuria=detail['Polyuria']
-    polydipsia=detail['Polydipsia']
-    suddenweightloss=detail['Sudden weight loss']
+    age=detail['age']
+    gender=detail['gender']
+    polyuria=detail['polyuria']
+    polydipsia=detail['polydipsia']
+    suddenweightloss=detail['suddenweightloss']
     weakness=detail['weakness']
-    polyphagia=detail['Polyphagia']
-    genitalthrush=detail['Genital thrush']
-    visualblurring=detail['visual blurring']
-    itching=detail['Itching']
-    irritability=detail['Irritability']
-    delayedhealing=detail['delayed healing']
-    partialparesis=int(detail['partial paresis'])
-    musclestiffness=int(detail['muscle stiffness'])
-    alopecia = int(detail['Alopecia'])
-    obesity = int(detail['Obesity'])
+    polyphagia=detail['polyphagia']
+    genitalthrush=detail['Genitalthrush']
+    visualblurring=detail['visionblurring']
+    itching=detail['itching']
+    irritability=detail['irritability']
+    delayedhealing=detail['delayedhealing']
+    partialparesis=detail['pp']
+    musclestiffness=detail['musclestiffness']
+    alopecia = detail['alopecia']
+    obesity = detail['obesity']
     outcome=[age,gender,polyuria,polydipsia,suddenweightloss,weakness,polyphagia,genitalthrush,visualblurring,itching,irritability,delayedhealing,partialparesis,musclestiffness,alopecia,obesity]
     print(outcome)
-    outcome=standard.fit_transform([outcome])
-    arr=[]
-    for i in outcome[0]:
-        arr.append(i)
    
-    prediction=model.predict([arr])
+    prediction=model.predict([outcome])
     if prediction==0:
         msg="NO , you dont have the symptoms of  diabetes"
     else:
@@ -62,3 +58,7 @@ def input():
     
 )
     return (html)
+
+
+if __name__=='__main__':
+    app.run(debug=True)
